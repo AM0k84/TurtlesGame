@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 # Wynik
 score = 0
 
-font_url = "assets/font2.ttf"
+font_url = "assets\\font2.ttf"
 font = pygame.font.Font(font_url, 33)
 textX = 10
 textY = 10
@@ -24,12 +24,12 @@ pygame.display.set_caption("Teenage Mutant Ninja Turtles _by:AM0k_(Lukasz Chalin
 
 # wgrywam ikonę gry
 
-icon_url = "assets/logo.png"
+icon_url = "assets\\logo.png"
 icon = pygame.image.load(icon_url)  # ładujemy obraz do zmiennej
 pygame.display.set_icon(icon)  # wgrywamy obraz do gry
 
 # wgrywamy ikone i tworzymy ikonę gracza oraz jego wstępne parametry
-playerImg_url = "assets/leonardo.png"
+playerImg_url = "assets\\leonardo.png"
 playerImg = pygame.image.load(playerImg_url)  # ładujemy obrazek do pamięci i zapisujem do zmiennej
 playerX = 368  # nadajemy wspolrzedna x w jakiej bedzie mial sie pojawic ikona gracza
 playerY = 500  # nadajemy wspolrzedna y w jakiej bedzie mial sie pojawic ikona gracza
@@ -44,16 +44,16 @@ enemyY = []
 enemy_speedX = []
 num_of_enemies = 6
 for i in range(num_of_enemies):
-    enemyImg_url = "assets/foot-clan.png"
+    enemyImg_url = "assets\\foot-clan.png"
     enemyImg.append(pygame.image.load(enemyImg_url))  # ładujemy obrazek do pamięci i zapisujem do listy
-    enemyImg_url2 = "assets/shreder.png"
+    enemyImg_url2 = "assets\\shreder.png"
     enemyImg.append(pygame.image.load(enemyImg_url2))
     enemyX.append(random.randint(0, 736))  # nadajemy wspolrzedna x w jakiej bedzie mial sie pojawic ikona gracza
     enemyY.append(0)  # nadajemy wspolrzedna y w jakiej bedzie mial sie pojawic ikona gracza
     enemy_speedX.append(random.choice([-1, 1, -2, 2, 3, -3]))  # ustalamy prędkość początkową gracza po osi x (poziomej) i losuje czy w lewo czy w prawo
 
 # wgrywamy ikone strzału i ją tworzymy
-bulletImg_url = "assets/pizza.png"
+bulletImg_url = "assets\\pizza.png"
 bulletImg = pygame.image.load(bulletImg_url)
 bulletX = -50
 bulletY = -50
@@ -61,7 +61,7 @@ bulletYspeed = 4  # potrzebujemu tutaj tylko osi Y bo strzal bedzie sie poruszal
 bulletState = "ready"  # będzie przyjmować albo ready albo throw (czyli gotowa do rzutu lub rzucona)
 
 # tworzymy funkcje koniec gry
-over_font_url = "assets/font2.ttf"
+over_font_url = "assets\\font2.ttf"
 over_font = pygame.font.Font(over_font_url, 80)
 game_state = "play"  # stan gry play/over
 
@@ -123,16 +123,16 @@ def show_score(x, y):
 
 
 # dźwięk tła
-music_url = "sounds/music.mp3"
+music_url = "sounds\\music.mp3"
 mixer.music.load(music_url)
 mixer.music.play(-1)  # puszczamy mp3 nieskonczona ilosc razy w loopie
 mixer.music.set_volume(0.1)
 
 # tworzymy pętle aby program działał nieprzerwanie
 running = True  # można rozumieć jako "gra działa/jest uruchomiona"
-throw_sound_url = "sounds/throw.wav"
-death_sound_url2 = "sounds/death2.wav"  # smierc wroga
-death_sound_url = "sounds/death.wav"
+throw_sound_url = "sounds\\throw.wav"
+death_sound_url2 = "sounds\\death2.wav"  # smierc wroga
+death_sound_url = "sounds\\death.wav"
 while running:  # dopóki gra jest uruchomiona
     screen.fill((232, 244, 208))  # nadajemy kolor dla tła
 
